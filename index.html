@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trivago Perú | Encuentra tu próxima escapada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="logo" href="#inicio">trivago<span>.</span></a>
+    <nav>
+      <a href="#destinos">Destinos</a>
+      <a href="#alojamientos">Alojamientos</a>
+      <a href="#consejos">Consejos</a>
+    </nav>
+    <a class="boton-superior" href="#formulario">Planear viaje ↗</a>
+  </header>
+
+  <main>
+    <section class="portada" id="inicio">
+      <div class="portada-contenido">
+        <span class="etiqueta">✦ DESCUBRE EL PERÚ A TU MANERA</span>
+        <h1>Tu próxima aventura<br>empieza <span>aquí.</span></h1>
+        <p>Encuentra inspiración, descubre nuevos destinos y planea una escapada inolvidable.</p>
+      </div>
+
+      <form class="buscador" id="formulario">
+        <div class="campo">
+          <label for="region">¿A dónde quieres ir?</label>
+          <select id="region" required>
+            <option value="">Selecciona una región</option>
+            <option>Amazonas</option>
+            <option>Áncash</option>
+            <option>Apurímac</option>
+            <option>Arequipa</option>
+            <option>Ayacucho</option>
+            <option>Cajamarca</option>
+            <option>Callao</option>
+            <option>Cusco</option>
+            <option>Huancavelica</option>
+            <option>Huánuco</option>
+            <option>Ica</option>
+            <option>Junín</option>
+            <option>La Libertad</option>
+            <option>Lambayeque</option>
+            <option>Lima</option>
+            <option>Loreto</option>
+            <option>Madre de Dios</option>
+            <option>Moquegua</option>
+            <option>Pasco</option>
+            <option>Piura</option>
+            <option>Puno</option>
+            <option>San Martín</option>
+            <option>Tacna</option>
+            <option>Tumbes</option>
+            <option>Ucayali</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="entrada">Fecha de llegada</label>
+          <input type="date" id="entrada" required>
+        </div>
+
+        <div class="campo">
+          <label for="salida">Fecha de salida</label>
+          <input type="date" id="salida" required>
+        </div>
+
+        <div class="campo">
+          <label for="personas">Viajeros</label>
+          <select id="personas">
+            <option value="1">1 persona</option>
+            <option value="2" selected>2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 personas</option>
+            <option value="6">6 personas</option>
+          </select>
+        </div>
+
+        <button class="boton-buscar" type="submit">⌕ Buscar</button>
+      </form>
+      <p id="mensaje" class="mensaje" role="status"></p>
+      <div class="confianza">
+        <span>✦ Inspírate</span>
+        <span>⌖ Explora el Perú</span>
+        <span>♡ Planea a tu manera</span>
+      </div>
+    </section>
+
+    <section class="seccion" id="destinos">
+      <div class="encabezado">
+        <div>
+          <span class="subtitulo">LUGARES QUE ENAMORAN</span>
+          <h2>¿A dónde te gustaría ir?</h2>
+          <p>Elige un destino y empieza a planear tu próxima aventura.</p>
+        </div>
+      </div>
+
+      <div class="destinos-grid">
+        <button class="destino grande" data-region="Cusco">
+          <span class="destino-info"><small>HISTORIA Y CULTURA</small><strong>Cusco</strong><span>Descubre los Andes ↗</span></span>
+        </button>
+        <button class="destino playa" data-region="Piura">
+          <span class="destino-info"><small>SOL Y PLAYA</small><strong>Piura</strong><span>Disfruta la costa ↗</span></span>
+        </button>
+        <button class="destino montana" data-region="Arequipa">
+          <span class="destino-info"><small>PAISAJES ÚNICOS</small><strong>Arequipa</strong><span>Vive la aventura ↗</span></span>
+        </button>
+        <button class="destino selva" data-region="Loreto">
+          <span class="destino-info"><small>NATURALEZA</small><strong>Loreto</strong><span>Explora la Amazonía ↗</span></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="seccion alojamientos" id="alojamientos">
+      <div class="encabezado">
+        <div>
+          <span class="subtitulo">TU PRÓXIMA ESTADÍA</span>
+          <h2 id="titulo-resultados">Alojamientos para inspirarte</h2>
+          <p id="texto-resultados">Selecciona un destino para ver tarjetas de ejemplo.</p>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <button class="filtro activo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="economico">Económicos</button>
+        <button class="filtro" data-filtro="confort">Confort</button>
+        <label class="orden">Ordenar por
+          <select id="orden">
+            <option value="recomendados">Recomendados</option>
+            <option value="precio">Precio ilustrativo: menor a mayor</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="lista-alojamientos" class="alojamientos-grid"></div>
+
+      <div id="estado-vacio" class="estado-vacio">
+        <span class="icono-vacio">⌕</span>
+        <h3>Tu próximo destino te espera</h3>
+        <p>Elige una región en el buscador para explorar las opciones de demostración.</p>
+      </div>
+
+      <p class="aviso">
+        Aviso: los nombres y precios que aparezcan son ejemplos de diseño.
+        No representan hoteles verificados ni disponibilidad real.
+      </p>
+    </section>
+
+    <section class="franja" id="consejos">
+      <div class="seccion">
+        <span class="subtitulo">VIAJAR ES VIVIR</span>
+        <h2>Planea tu viaje con ilusión</h2>
+        <div class="consejos-grid">
+          <article><span>01</span><h3>Elige tu destino</h3><p>Piensa en el tipo de experiencia que quieres vivir.</p></article>
+          <article><span>02</span><h3>Organiza tus fechas</h3><p>Planifica los días de tu viaje y calcula tu presupuesto.</p></article>
+          <article><span>03</span><h3>Compara con calma</h3><p>Revisa las características de cada alojamiento antes de reservar.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo logo-blanco" href="#inicio">trivago<span>.</span></a>
+    <p>Inspírate, descubre y planea tu próxima aventura por el Perú.</p>
+    <small>Proyecto académico · Página demostrativa</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
