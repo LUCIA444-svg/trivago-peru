@@ -7,7 +7,7 @@
   --azul-oscuro: #0b2445;
   --naranja: #f58220;
   --texto: #25344b;
-  --gris: #78869a;
+  --gris: #5a6678;
   --borde: #e5eaf1;
 }
 
@@ -88,7 +88,7 @@ button, select {
   color: white;
   background:
     linear-gradient(90deg, #081e3cef, #0b2445a8 55%, #0b244540),
-    url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=2000&q=85")
+    url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=70")
     center / cover;
 }
 
@@ -178,14 +178,14 @@ button, select {
   padding: 0 20px;
   border: none;
   border-radius: 8px;
-  background: var(--naranja);
+  background: #c2410c;
   color: white;
   font-weight: bold;
   transition: .2s;
 }
 
 .boton-buscar:hover {
-  background: #df6c11;
+  background: #9a3412;
   transform: translateY(-2px);
 }
 
@@ -218,7 +218,7 @@ button, select {
 }
 
 .subtitulo {
-  color: #d96c16;
+  color: #b45309;
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 1.7px;
@@ -296,20 +296,20 @@ button, select {
 
 .destino.grande {
   grid-row: span 2;
-  background-image: url("https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=85");
+  background-image: url("https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=70");
 }
 
 .destino.playa {
-  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=85");
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70");
 }
 
 .destino.montana {
-  background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85");
+  background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=70");
 }
 
 .destino.selva {
   grid-column: 2 / 4;
-  background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85");
+  background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=70");
 }
 
 .alojamientos {
@@ -394,7 +394,7 @@ button, select {
 .region-tag {
   display: inline-block;
   margin-bottom: 9px;
-  color: #d96c16;
+  color: #b45309;
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -477,7 +477,7 @@ button, select {
 
 .aviso {
   margin-top: 22px;
-  color: #7c8798;
+  color: #5a6678;
   font-size: 11px;
   line-height: 1.7;
 }
@@ -628,4 +628,8 @@ footer small {
     width: 100%;
     max-width: none;
   }
+}
+
+.consejos-grid article > span {
+  color: #b45309;
 }

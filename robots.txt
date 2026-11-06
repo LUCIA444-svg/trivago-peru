@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lucia444-svg.github.io/trivago-peru/sitemap.xml
