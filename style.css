@@ -633,3 +633,12 @@ footer small {
 .consejos-grid article > span {
   color: #b45309;
 }
+
+@media (max-width: 650px) {
+  .portada {
+    background:
+      linear-gradient(90deg, #081e3cef, #0b2445a8 55%, #0b244540),
+      url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=70")
+      center / cover;
+  }
+}
