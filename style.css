@@ -613,6 +613,16 @@ footer small {
     grid-column: 1 / -1;
   }
 
+  .destino.playa,
+  .destino.montana {
+    padding: 16px;
+  }
+
+  .destino.playa .destino-info strong,
+  .destino.montana .destino-info strong {
+    font-size: 20px;
+  }
+
   .alojamientos-grid,
   .consejos-grid {
     grid-template-columns: 1fr;
